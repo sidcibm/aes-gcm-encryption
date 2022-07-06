@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50929c67-e6ef-415f-9aa6-7d9904b4a23b" name="Changes" comment="Minor fixes" />
+    <list default="true" id="50929c67-e6ef-415f-9aa6-7d9904b4a23b" name="Changes" comment="Minor fixes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/encryption/service/IEncryptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/encryption/service/IEncryptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/encryption/service/impl/EncryptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/encryption/service/impl/EncryptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/encryption/service/EncryptionServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/encryption/service/EncryptionServiceTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

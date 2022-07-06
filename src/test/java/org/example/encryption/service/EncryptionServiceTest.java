@@ -1,17 +1,31 @@
 package org.example.encryption.service;
 
 import org.example.encryption.service.impl.EncryptionService;
+import org.junit.Before;
 import org.junit.Test;
 
+import javax.crypto.KeyGenerator;
 import java.nio.charset.StandardCharsets;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 public class EncryptionServiceTest {
     IEncryptionService iEncryptionService = new EncryptionService();
-    String plainString = "plainString";
-    String key = "dRgUkXp2s5v8y/A?D(G+KbPeShVmYq3t";
+    String plainString;
+    byte[] key;
+
+    @Before
+    public void setUp() throws NoSuchAlgorithmException {
+        byte[] plainBytes = new byte[16];
+        SecureRandom.getInstanceStrong().nextBytes(plainBytes);
+        plainString = new String(plainBytes, StandardCharsets.UTF_8);
+        KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
+        keyGenerator.init(256);
+        key = keyGenerator.generateKey().getEncoded();
+    }
 
     @Test
     public void decryptShouldBeTheInverseOfEncrypt() throws Exception {
