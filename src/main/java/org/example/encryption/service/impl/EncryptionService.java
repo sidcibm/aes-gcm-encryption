@@ -14,7 +14,7 @@ public class EncryptionService implements IEncryptionService {
 
     private Cipher getCipher(int operationMode, byte[] key, GCMParameterSpec gcmParameterSpec) throws Exception {
         Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
-        cipher.init(operationMode, new SecretKeySpec(key, 0, key.length, "AES"), gcmParameterSpec);
+        cipher.init(operationMode, new SecretKeySpec(key, "AES"), gcmParameterSpec);
         return cipher;
     }
 
