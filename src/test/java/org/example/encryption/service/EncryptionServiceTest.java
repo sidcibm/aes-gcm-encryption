@@ -1,4 +1,4 @@
 package org.example.encryption.service;
 
-public class IEncryptionServiceTest {
+public class EncryptionServiceTest {
 }
