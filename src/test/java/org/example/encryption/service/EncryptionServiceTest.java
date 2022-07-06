@@ -22,7 +22,7 @@ public class EncryptionServiceTest {
     }
 
     @Test
-    public void encryptingTwiceWithSameKeyShouldBeDifferent() throws Exception {
+    public void encryptingTwiceWithTheSameKeyShouldBeDifferent() throws Exception {
         byte[] encryptedBytes1 = iEncryptionService.encrypt(plainString.getBytes(StandardCharsets.UTF_8), key);
         byte[] encryptedBytes2 = iEncryptionService.encrypt(plainString.getBytes(StandardCharsets.UTF_8), key);
         assertNotEquals(encryptedBytes1, encryptedBytes2);
