@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import javax.crypto.KeyGenerator;
 import java.nio.charset.StandardCharsets;
+import java.security.GeneralSecurityException;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 
@@ -28,7 +29,7 @@ public class EncryptionServiceTest {
     }
 
     @Test
-    public void decryptShouldBeTheInverseOfEncrypt() throws Exception {
+    public void decryptShouldBeTheInverseOfEncrypt() throws GeneralSecurityException {
         byte[] encryptedBytes = iEncryptionService.encrypt(plainString.getBytes(StandardCharsets.UTF_8), key);
         byte[] decryptedBytes = iEncryptionService.decrypt(encryptedBytes, key);
         String decryptedString = new String(decryptedBytes, StandardCharsets.UTF_8);
@@ -36,7 +37,7 @@ public class EncryptionServiceTest {
     }
 
     @Test
-    public void encryptingTwiceWithTheSameKeyShouldBeDifferent() throws Exception {
+    public void encryptingTwiceWithTheSameKeyShouldBeDifferent() throws GeneralSecurityException {
         byte[] encryptedBytes1 = iEncryptionService.encrypt(plainString.getBytes(StandardCharsets.UTF_8), key);
         byte[] encryptedBytes2 = iEncryptionService.encrypt(plainString.getBytes(StandardCharsets.UTF_8), key);
         assertNotEquals(encryptedBytes1, encryptedBytes2);
